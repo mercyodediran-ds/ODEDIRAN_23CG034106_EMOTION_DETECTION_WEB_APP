@@ -1,0 +1,232 @@
+/* ==========================
+   GLOBAL STYLE
+========================== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  
+  /* ==========================
+     UPLOAD CONTAINER
+  ========================== */
+  .upload-container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+    max-width: 450px;
+    width: 90%;
+    animation: fadeIn 0.8s ease-in;
+  }
+  
+  input[type="text"], input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #66a6ff;
+    box-shadow: 0 0 5px rgba(102,166,255,0.5);
+    outline: none;
+  }
+  
+  button {
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* ==========================
+     FLASH MESSAGE
+  ========================== */
+  .flash {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* ==========================
+     RESULT PAGE
+  ========================== */
+  .result-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 50px auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+  
+  .result-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #66a6ff;
+    margin-bottom: 20px;
+  }
+  
+  .emotion-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  
+  /* Emotion Colors */
+  .emotion-happy { background: #f9ca24; }
+  .emotion-sad { background: #3498db; }
+  .emotion-angry { background: #e74c3c; }
+  .emotion-fear { background: #9b59b6; }
+  .emotion-surprise { background: #f39c12; }
+  .emotion-neutral { background: #95a5a6; }
+  
+  .score-table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  .score-table th, .score-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .score-table th {
+    background-color: #0072ff;
+    color: white;
+  }
+  
+  /* ==========================
+     HISTORY PAGE
+  ========================== */
+  .history-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    margin: 100px auto;
+    animation: fadeIn 0.8s ease;
+  }
+  
+  .history-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .history-card {
+    background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .history-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .history-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .history-info {
+    margin-top: 10px;
+  }
+  
+  .history-info h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  
+  .timestamp {
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+  }
+  
+  /* ==========================
+     FOOTER
+  ========================== */
+  footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #fff;
+    opacity: 0.8;
+  }
+  
+  /* ==========================
+     ANIMATIONS
+  ========================== */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  

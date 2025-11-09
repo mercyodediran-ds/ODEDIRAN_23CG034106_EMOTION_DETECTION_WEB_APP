@@ -1,0 +1,15 @@
+# Ignore virtual environment
+venv/
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+
+# Ignore SQLite database
+*.db
+
+# Ignore uploaded files
+static/uploads/
+
+# Ignore environment and config
+.env
