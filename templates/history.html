@@ -137,7 +137,7 @@
                     <img src="{{ url_for('static', filename='uploads/' + row[2]) }}" alt="face">
                 </td>
                 <td>{{ row[3] }}</td>
-                <td style="font-size:0.75rem; color:#a8e6cf;">{{ row[4] }}</td>
+                <td style="font-size:0.75rem; color:#a8e6cf;">{{ row[4] | safe }}</td>
                 <td>{{ row[5] }}</td>
             </tr>
             {% endfor %}
