@@ -118,28 +118,30 @@
     <div class="history-container">
         {% if rows %}
         <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Image</th>
-                    <th>Emotion</th>
-                    <th>Date/Time</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for row in rows %}
-                <tr>
-                    <td>{{ loop.index }}</td>
-                    <td>{{ row[1] }}</td>
-                    <td>
-                        <img src="{{ url_for('static', filename='uploads/' + row[2]) }}" alt="face">
-                    </td>
-                    <td>{{ row[3] }}</td>
-                    <td>{{ row[4] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
+          <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Emotion</th>
+                <th>Scores</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ row[1] }}</td>
+                <td>
+                    <img src="{{ url_for('static', filename='uploads/' + row[2]) }}" alt="face">
+                </td>
+                <td>{{ row[3] }}</td>
+                <td style="font-size:0.75rem; color:#a8e6cf;">{{ row[4] }}</td>
+                <td>{{ row[5] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
         </table>
         {% else %}
         <p style="text-align:center; color:#eee;">No history records yet 😅</p>

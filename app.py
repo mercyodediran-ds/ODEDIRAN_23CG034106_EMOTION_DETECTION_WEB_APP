@@ -123,7 +123,7 @@ def index():
 def history():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
-    c.execute("SELECT id, name, filename, emotion, timestamp FROM results ORDER BY id DESC LIMIT 50")
+    c.execute("SELECT id, name, filename, emotion, scores, timestamp FROM results ORDER BY id DESC DESC LIMIT 50")
     rows = c.fetchall()
     conn.close()
     return render_template("history.html", rows=rows, year=datetime.utcnow().year)
