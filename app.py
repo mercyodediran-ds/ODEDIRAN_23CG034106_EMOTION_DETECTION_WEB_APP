@@ -128,10 +128,11 @@ def history():
     conn.close()
     return render_template("history.html", rows=rows, year=datetime.utcnow().year)
 
-
 # =====================================
 # RUN APP
 # =====================================
+# Create database on every startup (Render doesn't persist files)
+init_db()
+
 if __name__ == "__main__":
-    init_db()
     app.run(debug=True)
